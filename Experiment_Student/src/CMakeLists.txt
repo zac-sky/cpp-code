@@ -1,4 +1,4 @@
-#这是位于src下面的CMakeLists.txt，用于将src下面的所有代码
+#这是位于src下面的CMakeLists.txt，用于将src下面的所有代码构建成静态库
 
 #${CMAKE_SOURCE_DIR}是项目的根目录
 message("CMAKE_SOURCE_DIR: " ${CMAKE_SOURCE_DIR})
@@ -23,8 +23,7 @@ ADD_COMPILE_OPTIONS("-Wall")
 #将所有的编译器警告视为错误
 ADD_COMPILE_OPTIONS("-Werror")
 #将${SOURCE}里面包含的所有cpp文件编译构建成一个库（lib），类型是static库
-#库的名称是最顶层CMakeLists.txt(也就是项目根目录下的CMakeLists.txt)里面定义的：PROJECT("项目名称")
-#库的文件名为：lib${PROJECT_NAME}.a
+#库的文件名为：lib${PROJECT_NAME}.a，其中${PROJECT_NAME}是项目根目录下的CMakeLists.txt里面定义的：PROJECT("项目名称")
 ADD_LIBRARY(${PROJECT_NAME} ${SOURCE})
 
 

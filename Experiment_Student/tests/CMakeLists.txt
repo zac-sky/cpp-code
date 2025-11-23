@@ -1,5 +1,5 @@
 #这个CMakeLists.txt位于test目录下
-#用于将构建tests目录下的测试代码
+#用于构建tests目录下的测试代码，最终构建成exe文件
 
 #构建系统时禁用GMock
 #设置缓存变量BUILD_GMOCK为OFF，变量类型为BOOL
